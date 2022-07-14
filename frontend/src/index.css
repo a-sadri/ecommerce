@@ -1,0 +1,9 @@
+main {
+  min-height: 80vh;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
