@@ -1,21 +1,30 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { AiOutlineUser, AiOutlineShoppingCart } from 'react-icons/ai';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Header = () => {
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
-          <Navbar.Brand href='#home'>Ecommerce</Navbar.Brand>
+          <LinkContainer to='/'>
+            <Navbar.Brand href='#home'>Ecommerce</Navbar.Brand>
+          </LinkContainer>
+
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='me-auto'>
-              <Nav.Link href='/cart' className='vertical-center'>
-                <AiOutlineShoppingCart></AiOutlineShoppingCart>Cart
-              </Nav.Link>
-              <Nav.Link href='/login' className='vertical-center'>
-                <AiOutlineUser></AiOutlineUser>Login
-              </Nav.Link>
+              <LinkContainer to='/cart'>
+                <Nav.Link className='vertical-center'>
+                  <AiOutlineShoppingCart></AiOutlineShoppingCart>Cart
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to='/login'>
+                <Nav.Link className='vertical-center'>
+                  <AiOutlineUser></AiOutlineUser>Login
+                </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>

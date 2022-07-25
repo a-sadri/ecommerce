@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import products from '../assets/products';
 import Product from '../components/Product';
 
-function Home() {
+function HomePage() {
   return (
     <div>
       <h1>Latest Products</h1>
@@ -18,4 +18,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
